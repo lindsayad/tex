@@ -1,0 +1,112 @@
+\documentclass[11pt]{article}
+
+\usepackage{setspace}
+\usepackage[top=1in, bottom=1in, left=1in, right=1in]{geometry}
+\usepackage{graphicx}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{2ex plus 0.5ex minus 0.2ex}
+
+\begin{document}
+\onehalfspace
+\textbf{Momma's birthday present, December 2018: Letter III}
+
+Hi Mom! My last two letters seem to have been pretty philosophical, but this one
+should be pretty straightforward and focused on the contents of work. I have
+been at INL for a year and a half now working on the Multiphysics Object
+Oriented Simulation Environment (MOOSE). MOOSE is used for solving equations
+related to physics and engineering. It's used to try and model real world
+processes to replace the need for costly experiments. I'll try and explain what
+specific work I have been doing to advance MOOSE.
+
+My biggest project in the last year has been on something called automatic
+differentiation. In order to solve our differential equations we use a process
+called Newton's method, which I won't go into the details of. But essentially in
+order to effectively use Newton's method, we have to be able to take
+derivatives of our equations with respect to our unknowns. Derivative is a fancy
+word for rate-of-change. We can say that speed is the time-derivative of
+position, e.g. a car's speed is the time derivative of the car's position. It
+can be very difficult to calculate derivatives; it's a very error-prone process
+and can lead to very slow simulations. So my co-worker Derek, another developer
+named Roy, and I created automatic differentiation capabilities in
+MOOSE. Instead of having humans calculate the required derivatives, we now let
+the computer do it! The machinery behind automatic differentiation involves
+fairly complex C++ template programming; getting that to work was a very fun
+learning experience. (C++ is the programming language behind MOOSE. It's a very
+universal language that companies like Google, Facebook, and Microsoft all use.)
+
+I would say that my second largest contribution to MOOSE is introducing what we
+call ``vector'' finite elements. I'll give a brief definition of both ``vector''
+and ``finite element.'' Let's say I want to solve for the motion of water in a
+swimming pool, e.g. I want to be able to predict how the water will move after a
+kid jumps into the pool. In order to get an accurate prediction using a
+computer, I need to break up the solution domain (the swimming pool) into
+individual pieces, what we call ``finite elements'', and then solve for the
+water motion in each small individual piece. I could break the pool up, for
+example, into a bunch of 1 $\rm{ft}^3$ water blocks. Until last year, MOOSE
+could only solve for ``scalar'' variables on these finite elements. The
+difference between a ``scalar'' and a ``vector'' is that the latter has a
+direction. Acceleration is an example of a vector; in the car you can accelerate
+forwards or you can accelerate backwards. You can accelerate to the left or to
+the right. Essentially if I can ask where something is pointing, then that thing
+is a vector. Where does gravity point? It points down. It's a vector. What
+direction does the earth's magnetic field point? It points towards the
+south pole; it's a vector. Things that aren't vectors (so they're scalars):
+temperature, weight, pressure, brightness. So I lied a little bit; before last
+year, we could actually solve for vectors, but we could only do it by
+decomposing them into scalars. We would split acceleration for example into
+three pieces: left and right, top and bottom, front and back. This is actually a
+clumsy thing to do: it forces people who use MOOSE to write more code than they
+need to, and any time people have to write more code, there are greater chances
+for mistakes. Moreover, there are actually more elegant ways to solve vector
+problems (like in electromagnetism!) that one can use when legitimately treating
+vectors like vectors and not as individual scalars. So last winter I added this
+vector capability into MOOSE and now people like my friend Casey are using that
+capability to model things like radio antennas!
+
+So the last two paragraphs were about very mathy topics. I'll touch a little now
+on the more ``physicy'' things that I've been doing. One project I've been
+working on is focused on ``mechanical contact.'' ``Mechanical contact'' is a
+fancy way of referring to the interactions that take place when you make two
+objects physically touch each other. So in a nuclear reactor for example, the
+fission process heats up the nuclear fuel and it slowly expands until it touches
+the surrounding structural material (basically just metal tubes). We want to
+understand the forces that occur when these materials come into contact because
+we want to ensure we don't place too much strain on our structures; we don't
+want them to bend and break! Resolving mechanical contact is actually the most
+mathematically difficult problem we solve with MOOSE. The equations governing
+mechanical contact are not ``smooth.'' So my friend Fande and I have been
+looking at how to solve the mechanical contact problem in a more mathematically
+rigorous way using a concept called ``variational inequalities''. I won't go
+into the details about the latter topic, but I'll just say that it's been a very
+interesting project and it's not yet done! I do hope to wrap up my contributions by
+the end of the next fiscal year (September 2019).
+
+The other ``physicy'' thing I've been working on is laser welding. You probably
+know the concept of welding just as well as I do, but it's essentially the
+process of joining two solids by melting them together and then allowing the
+result to cool and solidify. Laser welding is a pretty neat physical process. To
+model it we have to capture several things. We need to be able to capture the
+transition from solid to liquid, and the resulting flow patterns of the liquid
+which depend on evaporation of material from the liquid pool, surface tension
+effects (these are like the forces that keep a bead of water intact on a
+Gore-tex jacket), and other factors. Capturing the deformation of the liquid
+weld pool due to some of those forces is actually a very challenging modeling
+process, but the results look really neat! I can definitely show you a video
+sometime! I'll note that some of the things I've done to make these laser
+welding simulations work will be applicable to other engineering disciplines
+such as fluid-structure interaction which looks at things like movement of blood
+capillaries according to the motion of blood through the body.
+
+We'll that's a re-cap of the most important work I've been doing with MOOSE since
+starting employment at INL. The next few months will involve finishing the
+mechanical contact work and supporting our user base as they begin adopting
+automatic differentiation. It's difficult to talk about what I do without using
+some technical phrases, but hopefully I've minimized that as much as possible or
+given examples in the case where they must be used.
+
+Merry Christmas Mom!
+
+Love, Alex
+
+\end{document}

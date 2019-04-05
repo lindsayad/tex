@@ -69,8 +69,7 @@
 %----------------------------------------------------------------------------------------
 \begin{center}
 \Large Alexander Lindsay\\
-\normalsize (425) 772-9375\\
-alexlindsay239@gmail.com\\
+alexander.lindsay@inl.gov\\
 github.com/lindsayad\\
 \end{center}
 
@@ -81,12 +80,27 @@ github.com/lindsayad\\
 \section{Employment}
 
 \begin{table}[h]
-  \begin{tabularx}{\textwidth}{rX}
+  \begin{tabularx}{\textwidth}{r>{\raggedright\arraybackslash}X}
 
-    \textsc{'16 - '17} & Postdoctoral Researcher, University of Illinois |
-    Research: Develop MOOSE application for Molten Salt Reactor simulation;
-    improve support for Exodus in yt visualization package | Advisors: Katherine
-    Huff, Matthew Turk\\
+    \textsc{'17 - '19} & \textbf{Computational Scientist}, \textit{Idaho National Laboratory}\newline
+    Research topics:
+    \begin{itemize}
+    \item mortar FEM
+    \item automatic differentiation
+    \item vector finite element support (vector Lagrange and Nedelece elements)
+    \item fine grained control over element ghosting for parallel simulations
+    \item Nonlinear-complementarity formulations for applications such as mechanical contact
+    \item Aribitrary Lagrangian-Eulerian framework for fluid-structure interaction and laswer welding applications
+    \item SUPG and PSPG stabilization of the incompressible Navier-Stokes equations
+    \end{itemize}\\
+
+    \textsc{'16 - '17} & \textbf{Postdoctoral Researcher}, \textit{University of Illinois} \newline
+    Research topics:
+    \begin{itemize}
+    \item Multi-physics simulation of molten salt reactor concepts. Coupled neutron, heat, and precursor transport
+    \item Improve support for visualizing unstructured mesh results in the yt python package
+    \end{itemize}
+    Advisors: Katherine Huff, Matthew Turk\\
 
   \end{tabularx}
 \end{table}
@@ -98,19 +112,31 @@ github.com/lindsayad\\
 \section{Education}
 
 \begin{table}[h]
-\begin{tabularx}{\textwidth}{rX}
+\begin{tabularx}{\textwidth}{r>{\raggedright\arraybackslash}X}
 
-\textsc{'11 - '16} & Ph. D. in Nuclear Engineering, North Carolina State University | National Science Foundation Graduate Research Fellow | Thesis: ``Coupling of Plasmas and Liquids.'' | Advisor: Steven Shannon | \textsc{Gpa}: 4.0/4.0\\
+  \textsc{'11 - '16} & \textbf{Ph. D. in Nuclear Engineering}, \textit{North Carolina State University}\newline
+  National Science Foundation Graduate Research Fellow\newline
+  Thesis: ``Coupling of Plasmas and Liquids.''\newline
+  Advisor: Steven Shannon\newline
+  \textsc{Gpa}: 4.0/4.0\\
 &\\
 
 %------------------------------------------------
 
-\textsc{'14 - '15} & Visiting Researcher in Chemical Engineering, University of California-Berkeley | Research: Modelling of Plasma-Liquid Interfacial Transport | Advisor: David Graves\\
+  \textsc{'14 - '15} & \textbf{Visiting Researcher in Chemical Engineering}, \textit{University of California-Berkeley}\newline
+  Research: Modelling of Plasma-Liquid Interfacial Transport\newline
+  Advisor: David Graves\\
 &\\
 
 %------------------------------------------------
 
-\textsc{'06 - '10} & Bachelor's of Science in Chemical Engineering, University of Washington | Research (2007-08): Synthesis of Cobalt \& Ruthenium Complexes | Advisor: James Mayer | Research (2009): Effect of Magnetic Dipole Interactions on Energy Eigenstates | Advisor: Xiaosong Li | \textsc{Gpa}: 3.88/4.0\\
+  \textsc{'06 - '10} & \textbf{Bachelor's of Science in Chemical Engineering}, \textit{University of Washington}\newline
+  Research:
+  \begin{itemize}
+  \item 2007-08: Synthesis of Cobalt \& Ruthenium Complexes. Advisor: James Mayer
+  \item 2009: Effect of Magnetic Dipole Interactions on Energy Eigenstates. Advisor: Xiaosong Li
+  \end{itemize}
+  \textsc{Gpa}: 3.88/4.0\\
 
 \end{tabularx}
 \end{table}
@@ -138,26 +164,30 @@ github.com/lindsayad\\
 
 \section{Computational Skills}
 
-\begin{table}[h]
-\begin{tabularx}\textwidth{lX}
-%Basic Knowledge: & \textsc{php}, my\textsc{sql}, \textsc{html}, Access, \textsc{Linux}, ubuntu, {\fb \LaTeX}\setmainfont[SmallCapsFont=Fontin SmallCaps]{Fontin-Regular}\\
+\textbf{Software Development:}
+\begin{itemize}
+\item \href{https://github.com/idaholab/moose}{Moose} multi-physics framework
+\item \href{https://github.com/libmesh/libmesh}{libMesh} finite element library
+\item \href{https://github.com/roystgnr/metaphysicl}{MetaPhysicL} template programming library for enabling automatic differentiation
+\item \href{https://bitbucket.org/petsc/petsc}{PETSc} library for solution of non-linear and linear equation systems
+\item \href{https://github.com/shannon-lab/zapdos}{Zapdos} fluid modelling of low-temperature plasmas
+\item \href{https://github.com/arfc/moltres}{Moltres} molten salt reactors
+\item \href{https://bitbucket.org/yt/yt\_analysis}{yt} python visualization package for astrophysics simulation results and increasingly finite element simulations
+\item \href{https://github.com/sympy/sympy}{sympy} computer algebra system in python
+\end{itemize}
 
-Software Development & \href{https://github.com/shannon-lab/zapdos}{Zapdos} (fluid
-modelling of low-temperature plasmas),
-\href{https://github.com/arfc/moltres}{Moltres} (molten salt reactors),
-\href{https://github.com/idaholab/moose}{Moose} (Multiphysics Object-Oriented
-Simulation Environment, implemented interface kernel system, non-local side
-Jacobians, multiple interpolation schemes),
-\href{https://bitbucket.org/yt/yt\_analysis}{yt} (python visualization package
-for astrophysics simulation results and increasingly finite element simulations)\\
-
-Extensive experience & Linux, python (MatPlotLib, Numpy, \& Sympy), C++, emacs,
-git, Tex, gmsh, ParaView, Mathematica, Comsol, office packages \\
-
-Intermediate experience & File \& web-servers (LAMP stack), OpenFOAM, Salome\\
-
-\end{tabularx}
-\end{table}
+\textbf{Software experience:}
+\begin{itemize}
+\item C++
+\item python
+\item git
+\item mercurial
+\item emacs
+\item Unix
+\item Tex
+\item gmsh
+\item Comsol
+\end{itemize}
 
 \FloatBarrier
 
@@ -185,12 +215,12 @@ Intermediate experience & File \& web-servers (LAMP stack), OpenFOAM, Salome\\
 %	PASSIONS & INTERESTS
 %----------------------------------------------------------------------------------------
 
-\section{Other Passions \& Interests}
+%% \section{Other Passions \& Interests}
 
-\begin{itemize}
-  \item Running (2:39 marathon, 1:14 half-marathon, 15:54 5k, 9:02 3k, 4:33 mile)
-  \item Musician (Classical \& Celtic. Former violinist in Raleigh Symphony)
-\end{itemize}
+%% \begin{itemize}
+%%   \item Running (2:39 marathon, 1:14 half-marathon, 15:54 5k, 9:02 3k, 4:33 mile)
+%%   \item Musician (Classical \& Celtic. Former violinist in Raleigh Symphony)
+%% \end{itemize}
 
 %----------------------------------------------------------------------------------------
 

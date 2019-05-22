@@ -45,12 +45,14 @@
 \hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour} % Set link colors throughout the document
 
 \usepackage{titlesec} % Used to customize the \section command
+\usepackage{enumitem} % Used to eliminate space between list items
 \titleformat{\section}{\large\scshape\raggedright}{}{0em}{}[\titlerule] % Text formatting of sections
 %\titlespacing{\section}{0pt}{3pt}{3pt} % Spacing around sections
 \titlespacing*{\section} {0pt}{1ex}{1ex}
 
 \usepackage[none]{hyphenat}
 
+\usepackage{float}
 \usepackage{tabularx}
 \usepackage[labelformat=empty]{caption}
 \usepackage{verbatim}
@@ -68,7 +70,7 @@
 %	NAME AND CONTACT INFORMATION
 %----------------------------------------------------------------------------------------
 \begin{center}
-\Large Alexander Lindsay\\
+{\Large Alexander Lindsay}\\
 alexander.lindsay@inl.gov\\
 github.com/lindsayad\\
 \end{center}
@@ -79,10 +81,11 @@ github.com/lindsayad\\
 
 \section{Employment}
 
-\begin{table}[h]
+\begin{table}[H]
   \begin{tabularx}{\textwidth}{r>{\raggedright\arraybackslash}X}
 
     \textsc{'17 - '19} & \textbf{Computational Scientist}, \textit{Idaho National Laboratory}\newline
+    MOOSE core developer\newline
     Research topics:
     \begin{itemize}
     \item mortar FEM
@@ -112,7 +115,7 @@ github.com/lindsayad\\
 
 \section{Education}
 
-\begin{table}[h]
+\begin{table}[H]
 \begin{tabularx}{\textwidth}{r>{\raggedright\arraybackslash}X}
 
   \textsc{'11 - '16} & \textbf{Ph. D. in Nuclear Engineering}, \textit{North Carolina State University}\newline
@@ -166,7 +169,7 @@ github.com/lindsayad\\
 \section{Computational Skills}
 
 \textbf{Software Development:}
-\begin{itemize}
+\begin{itemize}[noitemsep]
 \item \href{https://github.com/idaholab/moose}{Moose} multi-physics framework
 \item \href{https://github.com/libmesh/libmesh}{libMesh} finite element library
 \item \href{https://github.com/roystgnr/metaphysicl}{MetaPhysicL} template programming library for enabling automatic differentiation
@@ -179,7 +182,7 @@ github.com/lindsayad\\
 \end{itemize}
 
 \textbf{Software experience:}
-\begin{itemize}
+\begin{itemize}[noitemsep]
 \item C++
 \item python
 \item git
@@ -201,7 +204,7 @@ github.com/lindsayad\\
 
 \section{Fellowships \& Scholarships}
 
-\begin{table}[h]
+\begin{table}[H]
 \begin{tabular}{rl}
 \textsc{2012-16} & National Science Foundation Graduate Research Fellow\\
 \textsc{2009-10} & Hendrickson Scholarship\\

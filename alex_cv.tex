@@ -84,24 +84,26 @@ github.com/lindsayad\\
 \begin{table}[H]
   \begin{tabularx}{\textwidth}{r>{\raggedright\arraybackslash}X}
 
-    \textsc{'17 - '20} & \textbf{Computational Scientist}, \textit{Idaho National Laboratory}\newline
+    \textsc{'17 - '22} & \textbf{Computational Scientist}, \textit{Idaho National Laboratory}\newline
     MOOSE core developer\newline
     Research topics:
     \begin{itemize}
-    \item mortar FEM
+    \item finite volume methods for incompressible, weakly compressible, and
+      fully compressible fluid flows
+    \item mortar finite element methods
     \item automatic differentiation
-    \item vector finite element support (vector Lagrange and Nedelece elements)
-    \item fine grained control over element ghosting for parallel simulations
-    \item Nonlinear-complementarity formulations for applications such as mechanical contact
-    \item Aribitrary Lagrangian-Eulerian framework for fluid-structure interaction and laswer welding applications
-    \item SUPG and PSPG stabilization of the incompressible Navier-Stokes equations
-    \item Functional expansion tallies for coupling monte carlo neutron transport with FEM
+    \item nonlinear-complementarity formulations for applications such as mechanical contact
+    \item Aribitrary Lagrangian-Eulerian framework for fluid-structure interaction and laser welding applications
+    \item SUPG and PSPG stabilization for finite element discretization of the incompressible Navier-Stokes
+      equations
+    \item Functional expansion tallies for coupling monte carlo neutron
+      transport with the finite element method
     \end{itemize}\\
 
     \textsc{'16 - '17} & \textbf{Postdoctoral Researcher}, \textit{University of Illinois} \newline
     Research topics:
     \begin{itemize}
-    \item Multi-physics simulation of molten salt reactor concepts. Coupled neutron, heat, and precursor transport
+    \item Multiphysics simulation of molten salt reactor concepts. Coupled neutron, heat, and precursor transport
     \item Improve support for visualizing unstructured mesh results in the yt python package
     \end{itemize}
     Advisors: Katherine Huff, Matthew Turk\\
@@ -145,12 +147,12 @@ github.com/lindsayad\\
 \end{tabularx}
 \end{table}
 
+\pagebreak
 %-------------------------------------------------------------------------------
 %	Publications
 %-------------------------------------------------------------------------------
 
 \input{publications.tex}
-\pagebreak
 
 % ---------------------------------------------------------------------------------------------
 %      Presentations
@@ -170,9 +172,12 @@ github.com/lindsayad\\
 
 \textbf{Software Development:}
 \begin{itemize}[noitemsep]
-\item \href{https://github.com/idaholab/moose}{Moose} multi-physics framework
+\item \href{https://github.com/idaholab/moose}{MOOSE} multiphysics framework
 \item \href{https://github.com/libmesh/libmesh}{libMesh} finite element library
-\item \href{https://github.com/roystgnr/metaphysicl}{MetaPhysicL} template programming library for enabling automatic differentiation
+\item \href{https://github.com/roystgnr/metaphysicl}{MetaPhysicL} template
+  programming library for enabling automatic differentiation
+\item \href{https://github.com/libmesh/timpi}{TIMPI} template programming
+  library for parallel process communication
 \item \href{https://bitbucket.org/petsc/petsc}{PETSc} library for solution of non-linear and linear equation systems
 \item \href{https://github.com/shannon-lab/zapdos}{Zapdos} fluid modelling of low-temperature plasmas
 \item \href{https://github.com/arfc/moltres}{Moltres} molten salt reactors
@@ -186,17 +191,10 @@ github.com/lindsayad\\
 \item C++
 \item python
 \item git
-\item mercurial
 \item emacs
 \item Unix
 \item Tex
-\item gmsh
-\item Serpent
-\item SCALE
-\item Comsol
 \end{itemize}
-
-\FloatBarrier
 
 %----------------------------------------------------------------------------------------
 %	Fellowships & Scholarships

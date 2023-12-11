@@ -46,7 +46,8 @@
 
 \usepackage{titlesec} % Used to customize the \section command
 \usepackage{enumitem} % Used to eliminate space between list items
-\titleformat{\section}{\large\scshape\raggedright}{}{0em}{}[\titlerule] % Text formatting of sections
+\setlist[itemize]{noitemsep, topsep=-\parskip, after=\vspace{2mm}}
+\titleformat{\section}{\large\scshape\raggedright}{}{0em}{}[\titlerule\vspace{2mm}] % Text formatting of sections
 %\titlespacing{\section}{0pt}{3pt}{3pt} % Spacing around sections
 \titlespacing*{\section} {0pt}{1ex}{1ex}
 
@@ -76,40 +77,49 @@ github.com/lindsayad\\
 \end{center}
 
 %----------------------------------------------------------------------------------------
+%	OVERVIEW
+%----------------------------------------------------------------------------------------
+
+\section{Overview}
+
+I am a computational scientist and MOOSE framework lead, specializing
+in the solution of partial differential equations (PDEs) describing physical and
+engineering processes. I enjoy developing all levels of the software stack
+involved in PDE solution, including templated C++ code for performing
+automatic differentiation for Newton's method, preconditioning techniques for
+saddle-point operators that arise in fluid flow and mechanical contact, new finite element schemes that
+capture the benefits of both continuous and discontinouous Galerkin methods, and
+implementation of various algebraic discretizations for the Navier-Stokes
+equations. I am passionate about open science and open source software and
+firmly believe that the MOOSE project is making the world
+a better place by supporting a vast breadth of researchers and research ranging
+from advanced fission reactor concepts to ferroelectrics.
+
+%----------------------------------------------------------------------------------------
 %	EMPLOYMENT
 %----------------------------------------------------------------------------------------
 
 \section{Employment}
 
-\begin{table}[H]
-  \begin{tabularx}{\textwidth}{r>{\raggedright\arraybackslash}X}
+\textbf{Computational Scientist}, \textit{Idaho National Laboratory}, \textsc{2017 - 2023}\newline
+\hspace*{0.5em}Multiphysics Object-Oriented Simulation Environment (MOOSE) framework lead\newline
+\hspace*{0.5em}Research topics:
+  \begin{itemize}
+  \item Hybridized finite element, traditional finite element, and finite volume methods for incompressible, weakly compressible, and fully compressible fluid flows
+  \item Scalable block preconditioning of saddle-point problems
+  \item Mortar finite element methods
+  \item Automatic differentiation
+  \item Aribitrary Lagrangian-Eulerian framework for fluid-structure interaction and laser melt pool applications
+  \end{itemize}
 
-    \textbf{Computational Scientist} & \textit{Idaho National Laboratory}, \textsc{2017 - 2023}\newline
-    MOOSE framework lead\newline
-    Research topics:
-    \begin{itemize}
-    \item hybridized finite element methods
-    \item scalable block preconditioning of saddle-point problems
-    \item finite volume methods for incompressible, weakly compressible, and
-      fully compressible fluid flows
-    \item mortar finite element methods
-    \item automatic differentiation
-    \item nonlinear-complementarity formulations for applications such as mechanical contact
-    \item Aribitrary Lagrangian-Eulerian framework for fluid-structure interaction and laser welding applications
-    \item SUPG and PSPG stabilization for finite element discretization of the incompressible Navier-Stokes
-      equations
-    \end{itemize}\\
 
-    \textbf{Postdoctoral Researcher} & \textit{University of Illinois}, \textsc{2016 - 2017} \newline
-    Research topics:
-    \begin{itemize}
-    \item Multiphysics simulation of molten salt reactor concepts. Coupled neutron, heat, and precursor transport
-    \item Improve support for visualizing unstructured mesh results in the yt python package
-    \end{itemize}
-    Advisors: Katherine Huff, Matthew Turk\\
-
-  \end{tabularx}
-\end{table}
+\textbf{Postdoctoral Researcher}, \textit{University of Illinois}, \textsc{2016 - 2017}\newline
+\hspace*{0.5em}Advisors: Katherine Huff, Matthew Turk\newline
+\hspace*{0.5em}Research topics:
+  \begin{itemize}
+  \item Multiphysics simulation of molten salt reactor concepts. Coupled neutron, heat, and precursor transport
+  \item Improve support for visualizing unstructured mesh results in the yt python package
+  \end{itemize}
 
 %----------------------------------------------------------------------------------------
 %	EDUCATION
@@ -117,52 +127,29 @@ github.com/lindsayad\\
 
 \section{Education}
 
-\begin{table}[H]
-\begin{tabularx}{\textwidth}{r>{\raggedright\arraybackslash}X}
-
-  \textsc{'11 - '16} & \textbf{Ph. D. in Nuclear Engineering}, \textit{North Carolina State University}\newline
-  National Science Foundation Graduate Research Fellow\newline
-  Thesis: ``Coupling of Plasmas and Liquids.''\newline
-  Advisor: Steven Shannon\newline
-  \textsc{Gpa}: 4.0/4.0\\
-&\\
+\textbf{Ph.D. in Nuclear Engineering}, \textit{North Carolina State University}, \textsc{2011 - 2016}\newline
+\hspace*{0.5em}National Science Foundation Graduate Research Fellow\newline
+\hspace*{0.5em}Thesis: ``Coupling of Plasmas and Liquids.''\newline
+\hspace*{0.5em}Advisor: Steven Shannon\newline
+\hspace*{0.5em}\textsc{Gpa}: 4.0/4.0\newline
 
 %------------------------------------------------
 
-  \textsc{'14 - '15} & \textbf{Visiting Researcher in Chemical Engineering}, \textit{University of California-Berkeley}\newline
-  Research: Modeling of Plasma-Liquid Interfacial Transport\newline
-  Advisor: David Graves\\
-&\\
+\textbf{Visiting Researcher in Chem. Eng.}, \textit{University of California-Berkeley}, \textsc{2014 - 2015}\newline
+\hspace*{0.5em}Research: Modeling of Plasma-Liquid Interfacial Transport\newline
+\hspace*{0.5em}Advisor: David Graves\newline
 
 %------------------------------------------------
 
-  \textsc{'06 - '10} & \textbf{Bachelor's of Science in Chemical Engineering}, \textit{University of Washington}\newline
-  Research:
-  \begin{itemize}
-  \item 2007-08: Synthesis of Cobalt \& Ruthenium Complexes. Advisor: James Mayer
-  \item 2009: Effect of Magnetic Dipole Interactions on Energy Eigenstates. Advisor: Xiaosong Li
-  \end{itemize}
-  \textsc{Gpa}: 3.88/4.0\\
+\textbf{Bachelor's of Science in Chemical Engineering}, \textit{University of Washington}, \textsc{2006 - 2010}\newline
+\hspace*{0.5em}Research topics:
+\begin{itemize}[noitemsep, topsep=-\parskip, after={}]
+\item 2007-08: Synthesis of Cobalt \& Ruthenium Complexes. \newline Advisor: James Mayer
+\item 2009: Effect of Magnetic Dipole Interactions on Energy Eigenstates. \newline Advisor: Xiaosong Li
+\end{itemize}
+\hspace*{0.5em}\textsc{Gpa}: 3.88/4.0\newline
 
-\end{tabularx}
-\end{table}
-
-\pagebreak
-%-------------------------------------------------------------------------------
-%	Publications
-%-------------------------------------------------------------------------------
-
-\input{publications.tex}
-
-% ---------------------------------------------------------------------------------------------
-%      Presentations
-% ---------------------------------------------------------------------------------------------
-
-\setcounter{magicrownumbers}{0}
-
-\input{presentations.tex}
-
-\FloatBarrier
+%% \pagebreak
 
 %----------------------------------------------------------------------------------------
 %	COMPUTATIONAL SKILLS
@@ -199,6 +186,22 @@ github.com/lindsayad\\
 \item Unix
 \item Tex
 \end{itemize}
+
+%-------------------------------------------------------------------------------
+%	Publications
+%-------------------------------------------------------------------------------
+
+\input{publications.tex}
+
+% ---------------------------------------------------------------------------------------------
+%      Presentations
+% ---------------------------------------------------------------------------------------------
+
+\setcounter{magicrownumbers}{0}
+
+\input{presentations.tex}
+
+\FloatBarrier
 
 %----------------------------------------------------------------------------------------
 %	Fellowships & Scholarships
